@@ -11,7 +11,7 @@ interface ExperienceItem {
 
 const experienceData: ExperienceItem[] = [
   {
-    year: "May 2024 - July 2024",
+    year: "Feb 2022 - Dec 2023",
     title: "Teaching",
     company: "Disha Computer Institute",
     description:
