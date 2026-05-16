@@ -8,7 +8,8 @@ import JourneySection from "../components/JourneySection";
 import CertificatesSection from "../components/CertificatesSection";
 import ActivitiesSection from "../components/ActivitiesSection";
 import WorkSection from "../components/WorkSection";
-import ContactSection from "../components/ContactSection";
+// import ContactSection from "../components/ContactSection";
+import ContactSection from "../pages/Contact";
 import { Mouse, ChevronDown, Rocket, Sparkles } from "lucide-react";
 
 const Index: React.FC = () => {
@@ -19,7 +20,7 @@ const Index: React.FC = () => {
   const rafRef = useRef<number>();
   const lastMousePosition = useRef({ x: 0, y: 0 });
   const isScrolling = useRef(false);
-  const scrollTimeout = useRef<NodeJS.Timeout>();
+  const scrollTimeout = useRef<number>();
 
   const allSections = ["home", "skills", "experience", "journey", "certificates", "activities", "work", "contact"];
 
