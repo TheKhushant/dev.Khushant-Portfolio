@@ -11,16 +11,16 @@ interface ExperienceItem {
 
 const experienceData: ExperienceItem[] = [
   {
-    year: "Feb 2022 - Dec 2023",
-    title: "Teaching",
-    company: "Disha Computer Institute",
+    year: "Aug 2025 - Current",
+    title: "MERN STACK DEVELOPER",
+    company: "Align Infotech",
     description:
-      "At Disha Computer Institute, I taught various programming languages including C, C++, Java, and frontend technologies like HTML, CSS, Bootstrap. I also trained students in software tools such as CorelDRAW, Photoshop, and AutoCAD, helping them build strong foundations in both coding and design.",
+      "At Align Infotech, I work as a MERN Stack Developer, contributing to the development of modern web applications. My responsibilities include building responsive and reusable front-end components and implementing backend services.",
     responsibilities: [
-     "Taught C, C++, Java, and frontend technologies: HTML, CSS, Bootstrap",
-     "Trained students in software tools: CorelDRAW, Photoshop, AutoCAD",
-     "Built and deployed mini-projects to enhance practical knowledge",
-     "Conducted hands-on sessions to reinforce learning",
+      "Handled multiple responsibilities in a startup environment including MERN stack client projects, video editing, content creation, and mentoring interns and students in DSA and MERN Stack development",
+      "Developed and managed internal company projects along with client-based applications",
+      "Collaborated with government clients and contributed to more than 25 government projects",
+      "Worked on various company projects mentioned in the work section with end-to-end development involvement",
     ],
   },
   {
@@ -34,6 +34,19 @@ const experienceData: ExperienceItem[] = [
       "Developed interactive and responsive web pages",
       "Enhanced SEO performance and loading speed",
       "Edited promotional and training videos for company branding",
+    ],
+  },
+  {
+    year: "Feb 2022 - Dec 2023",
+    title: "Teaching",
+    company: "Disha Computer Institute",
+    description:
+      "At Disha Computer Institute, I taught various programming languages including C, C++, Java, and frontend technologies like HTML, CSS, Bootstrap. I also trained students in software tools such as CorelDRAW, Photoshop, and AutoCAD, helping them build strong foundations in both coding and design.",
+    responsibilities: [
+     "Taught C, C++, Java, and frontend technologies: HTML, CSS, Bootstrap",
+     "Trained students in software tools: CorelDRAW, Photoshop, AutoCAD",
+     "Built and deployed mini-projects to enhance practical knowledge",
+     "Conducted hands-on sessions to reinforce learning",
     ],
   },
 ];

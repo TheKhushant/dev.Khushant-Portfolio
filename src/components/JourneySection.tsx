@@ -3,6 +3,14 @@ import { Calendar, Briefcase, GraduationCap, Code, ChevronDown, ChevronUp } from
 
 const journeyData = [
     {
+      year: '2025 - Present',
+      title: 'MERN Stack Developer',
+      company: 'Align Infotech',
+      description: 'Worked on MERN stack client projects, internal company products, and 25+ government projects | Managed video editing & content creation tasks | Mentored interns and students in DSA & MERN Stack | Skills: MERN Stack, React.js, Node.js, MongoDB, Content Creation, Video Editing, Leadership, Team Collaboration',
+      icon: <Briefcase className="w-5 h-5 text-white" />,
+      color: "from-orange-400 to-red-500"
+    },
+    {
       year: '2024 - Present',
       title: 'MCA (AI/ML)',
       company: 'Shree Ramdeobaba University',
@@ -88,7 +96,7 @@ const JourneySection: React.FC = () => {
           {/* Timeline Items */}
           <div className="space-y-8">
             {journeyData.map((item, index) => (
-              <div 
+              <div //box konse side rahega
                 key={index} 
                 className={`relative flex flex-col md:flex-row items-start ${
                   index % 2 === 0 ? 'md:flex-row-reverse' : ''
@@ -102,7 +110,7 @@ const JourneySection: React.FC = () => {
                 {/* Content Card */}
                 <div 
                   className={`w-full md:w-5/12 ${
-                    index % 2 === 0 ? 'md:pr-12 md:text-right' : 'md:pl-12'
+                    index % 2 === 0 ? 'md:pr-12 md:text-left' : 'md:pl-12'
                   }`}
                 >
                   <div 
@@ -110,7 +118,7 @@ const JourneySection: React.FC = () => {
                     onClick={() => toggleItem(index)}
                   >
                     {/* Year */}
-                    <div className={`flex items-center gap-2 mb-3 ${index % 2 === 0 ? 'md:justify-end' : ''}`}>
+                    <div className={`flex items-center gap-2 mb-3 ${index % 2 === 0 ? 'md:justify-end' : 'md:justify-end'}`}>
                       <Calendar className="w-4 h-4 text-cyan-400" />
                       <span className="text-cyan-300 font-mono text-sm">{item.year}</span>
                     </div>
@@ -120,7 +128,7 @@ const JourneySection: React.FC = () => {
                       <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${item.color} flex items-center justify-center shadow-lg`}>
                         {item.icon}
                       </div>
-                      <div className={`flex-1 ${index % 2 === 0 ? 'md:text-right' : ''}`}>
+                      <div className={`flex-1 ${index % 2 === 0 ? 'md:text-left' : ''}`}>
                         <h3 className="text-lg font-semibold text-white mb-1">{item.title}</h3>
                         <p className="text-cyan-300 font-medium text-sm">{item.company}</p>
                       </div>
