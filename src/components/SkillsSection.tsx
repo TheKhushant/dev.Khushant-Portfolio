@@ -12,21 +12,27 @@ const SkillsSection: React.FC = () => {
             color: "from-cyan-400 to-blue-500"
         },
         {
+            category: "Backend",
+            icon: <Database className="w-6 h-6 text-white" />,
+            items: ["Node.js", "Python", "Express.js", "MongoDB", "MySQL"],
+            color: "from-green-400 to-emerald-500"
+        },
+        {
             category: "Programming",
             icon: <Code className="w-6 h-6 text-white" />,
-            items: ["JavaScript", "Java", "C++", "C"],
+            items: ["JavaScript", "Java", "C++", "C", "Python", "SQL"],
             color: "from-green-400 to-emerald-500"
         },
         {
             category: "Design",
             icon: <Palette className="w-6 h-6 text-white" />,
-            items: ["Adobe Photoshop", "CoralDraw"],
+            items: ["Adobe Photoshop", "CoralDraw", "Canva", "Capcut", "VN Video Editor"],
             color: "from-purple-400 to-pink-500"
         },
         {
             category: "Tools",
             icon: <Laptop className="w-6 h-6 text-white" />,
-            items: ["Git", "VS Code", "GitHub", "Postman"],
+            items: ["Git", "VS Code", "GitHub", "Postman", "MongoDB Compass", "Antigravity"],
             color: "from-orange-400 to-red-500"
         },
         {
