@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Award, ExternalLink, X, ChevronDown, ChevronUp } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
@@ -16,52 +16,52 @@ const certificateCategories: {
         description:
             "Comprehensive training on UI/UX design, including wireframing, prototyping, and usability testing.",
         images: [
-            "Certi/UI/Certi1.png",
-            "Certi/UI/Certi2.png",
-            "Certi/UI/Certi3.png",
-            "Certi/UI/Certi4.png",
-            "Certi/UI/Certi5.png",
+            "/Certi/UI/Certi1.png",
+            "/Certi/UI/Certi2.png",
+            "/Certi/UI/Certi3.png",
+            "/Certi/UI/Certi4.png",
+            "/Certi/UI/Certi5.png",
         ],
     },
     Cyber: {
         description:
             "In-depth courses on cybersecurity fundamentals, encryption, ethical hacking, and secure systems.",
-        images: ["Certi/Cyber/Certi1.png"],
+        images: ["/Certi/Cyber/Certi1.png"],
     },
     Project_Management: {
         description:
             "Comprehensive training on project management methodologies, tools, and best practices.",
-        images: ["Certi/Project_Management/Certi1.png"],
+        images: ["/Certi/Project_Management/Certi1.png"],
     },
     Smart_India_Hackathon: {
         description:
             "Participated in the Smart India Hackathon 2024, a nationwide initiative to provide students with a platform to solve real-world problems.",
-        images: ["Certi/Hackthon/SmartIndia.png"],
+        images: ["/Certi/Hackthon/SmartIndia.png"],
     },
     SMACKATHON_24Hrs_Hackathon: {
         description:
             "Participated in the SMACKATHON 24Hrs Hackathon, a 24-hour coding challenge to develop innovative solutions.",
-        images: ["Certi/Hackthon/SMACKATHON.png"],
+        images: ["/Certi/Hackthon/SMACKATHON.png"],
     },
     GFG_ICPC: {
         description:
             "Participated in the GFG ICPC 2.0, a competitive programming event focused on algorithmic challenges.",
-        images: ["Certi/Hackthon/GFG.png"],
+        images: ["/Certi/Hackthon/GFG.png"],
     },
     PPT: {
         description:
             "Scored 2nd Rank in the PPT competition organized by KAMLA NEHRU MAHAVIDYALAYA, Nagpur.",
-        images: ["Certi/Hackthon/PPPT.png"],
+        images: ["/Certi/Hackthon/PPPT.png"],
     },
     JAVA: {
         description:
             "Hands-on course covering core Java concepts, object-oriented programming, and application development.",
-        images: ["Certi/Tech/java.png"],
+        images: ["/Certi/Tech/java.png"],
     },
     Frontend: {
         description:
             "Hands-on course covering HTML, CSS, JavaScript, React, and responsive web design.",
-        images: ["Certi/Tech/Frontend.png"],
+        images: ["/Certi/Tech/Frontend.png"],
     },
 };
 
@@ -163,6 +163,20 @@ const CertificatesSection: React.FC = () => {
         setActiveCategory(category);
     };
 
+    useEffect(() => {
+        const handleEsc = (event: KeyboardEvent) => {
+            if (event.key === "Escape") {
+                handleClose();
+            }
+        };
+
+        window.addEventListener("keydown", handleEsc);
+
+        return () => {
+            window.removeEventListener("keydown", handleEsc);
+        };
+    }, []);
+
     const handleClose = () => {
         setActiveCategory(null);
     };
@@ -216,7 +230,7 @@ const CertificatesSection: React.FC = () => {
 
                             {/* Hover Gradient Background */}
                             <div 
-                                className={`absolute inset-0 rounded-xl bg-gradient-to-br ${cert.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}
+                                className={`absolute inset-0 rounded-xl bg-gradient-to-br ${cert.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500 pointer-events-none `}
                             />
 
                             {/* Content */}
@@ -239,14 +253,14 @@ const CertificatesSection: React.FC = () => {
                             
                             <button
                                 onClick={() => handleView(cert.category)}
-                                className="flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 mt-auto group/view"
+                                className="relative z-20 cursor-pointer flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 mt-auto group/view"
                             >
                                 <span className="text-sm font-medium">View Certificate</span>
                                 <ExternalLink size={14} className="group-hover/view:translate-x-0.5 transition-transform duration-300" />
                             </button>
 
                             {/* Hover Border Effect */}
-                            <div className="absolute inset-0 rounded-xl border-2 border-transparent bg-gradient-to-r from-cyan-400 via-purple-400 to-cyan-400 opacity-0 group-hover:opacity-30 transition-opacity duration-500">
+                            <div className="absolute inset-0 rounded-xl border-2 border-transparent bg-gradient-to-r from-cyan-400 via-purple-400 to-cyan-400 opacity-0 group-hover:opacity-30 transition-opacity duration-500 pointer-events-none">
                                 <div className="w-full h-full bg-cosmic-dark rounded-xl" />
                             </div>
                         </div>
@@ -261,7 +275,7 @@ const CertificatesSection: React.FC = () => {
                 >
                     <button
                         onClick={() => setViewMore(!viewMore)}
-                        className="px-6 py-3 rounded-lg bg-white/10 backdrop-blur-sm text-white font-medium border border-white/20 hover:border-white/40 transition-all duration-300 flex items-center gap-2 mx-auto hover:scale-105"
+                        className="px-6 py-3 rounded-lg bg-white/10 backdrop-blur-sm text-white font-medium border border-white/20 hover:border-white/40 transition-all duration-300 flex items-center gap-2 mx-auto hover:scale-105 cursor-pointer"
                     >
                         <span>{viewMore ? "Show Less" : "View More Certificates"}</span>
                         {viewMore ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
@@ -271,15 +285,18 @@ const CertificatesSection: React.FC = () => {
 
             {/* Modal */}
             {activeCategory && (
-                <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 z-50">
-                    <div className="bg-white/10 backdrop-blur-xl rounded-xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden border border-white/20">
+                <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 z-50"
+                onClick={handleClose}>
+                    <div 
+                    onClick={(e) => e.stopPropagation()}
+                    className="bg-white/10 backdrop-blur-xl rounded-xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden border border-white/20">
                         <div className="flex items-center justify-between p-6 border-b border-white/10">
                             <h2 className="text-white text-2xl font-bold">
                                 {activeCategory.replace(/_/g, ' ')} Certificates
                             </h2>
                             <button
                                 onClick={handleClose}
-                                className="text-white/70 hover:text-white transition-colors duration-300 p-1"
+                                className="cursor-pointer text-white/70 hover:text-white transition-colors duration-300 p-1"
                             >
                                 <X size={24} />
                             </button>
@@ -328,6 +345,11 @@ const CertificatesSection: React.FC = () => {
                 }
                 .swiper-pagination-bullet-active {
                     opacity: 1;
+                }
+                .swiper-button-next,
+                .swiper-button-prev,
+                .swiper-pagination-bullet {
+                    cursor: pointer !important;
                 }
             `}</style>
         </section>

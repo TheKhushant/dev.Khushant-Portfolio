@@ -124,3 +124,8 @@
   @apply transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-cosmic-accent/20;
 }
 
+.swiper-button-next,
+.swiper-button-prev,
+.swiper-pagination-bullet {
+    cursor: pointer !important;
+}
