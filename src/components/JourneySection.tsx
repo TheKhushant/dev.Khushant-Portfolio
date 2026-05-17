@@ -140,7 +140,7 @@ const JourneySection: React.FC = () => {
                     </p>
 
                     {/* Expand/Collapse Button */}
-                    <div className={`flex ${index % 2 === 0 ? 'md:justify-end' : ''} mt-4`}>
+                    <div className={`flex ${index % 2 === 0 ? 'md:justify-end' : 'md:justify-end'} mt-4`}>
                       <button className="text-white/70 hover:text-white transition-colors duration-300 flex items-center gap-1 text-sm">
                         {isExpanded(index) ? (
                           <>
