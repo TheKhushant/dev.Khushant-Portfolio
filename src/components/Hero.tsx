@@ -123,6 +123,13 @@ const Hero: React.FC<HeroProps> = ({ name, title }) => {
             color: 'from-pink-400 to-purple-600',
             glow: 'hover:shadow-lg hover:shadow-pink-400/30'
         },
+        { 
+            icon: <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/LeetCode_Logo_1.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" className="w-8 h-8" alt="" />,
+            href: 'https://leetcode.com/u/KHUSHANT_WANKHEDE/', 
+            label: 'LeetCode',
+            color: 'from-orange-400 to-white-600',
+            glow: 'hover:shadow-lg hover:shadow-pink-400/30'
+        },
     ];
 
     return (

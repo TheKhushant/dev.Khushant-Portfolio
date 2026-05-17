@@ -4,6 +4,22 @@ import { Github, ExternalLink, ChevronDown, ChevronUp, Eye } from 'lucide-react'
 const projectsData = [
   {
     id: 1,
+    title: 'Portfolio Website',
+    description: 'A responsive, animated portfolio website to showcase skills, projects, and professional experience.',
+    technologies: ['React', 'Tailwind CSS', 'Framer Motion'],
+    image: ["img/port.png"],
+    github: 'https://github.com/TheKhushant/online-resume-crafter',
+    liveDemo: 'https://portfolionew-orcin-pi.vercel.app/',
+    color: "from-purple-400 to-pink-500",
+    features: [
+      "Responsive design",
+      "Smooth animations",
+      "Interactive components",
+      "Modern UI/UX"
+    ]
+  },
+  {
+    id: 2,
     title: 'Swiggy Clone',
     description: 'A full-stack food delivery application with user authentication, restaurant listings, and food ordering functionality.',
     technologies: ['React.js', 'Tailwind CSS', 'Custom API', 'Node.js'],
@@ -19,7 +35,7 @@ const projectsData = [
     ]
   },
   {
-    id: 2,
+    id: 3,
     title: 'Image Filter Website',
     description: 'A web application that applies various filters to images using computer vision algorithms.',
     technologies: ['HTML/CSS', 'JavaScript', 'Python', 'OpenCV', 'NumPy', 'Flask'],
@@ -32,22 +48,6 @@ const projectsData = [
       "Real-time filter preview",
       "Image upload and download",
       "Backend processing with Flask"
-    ]
-  },
-  {
-    id: 3,
-    title: 'Portfolio Website',
-    description: 'A responsive, animated portfolio website to showcase skills, projects, and professional experience.',
-    technologies: ['React', 'Tailwind CSS', 'Framer Motion'],
-    image: ["img/port.png"],
-    github: 'https://github.com/TheKhushant/online-resume-crafter',
-    liveDemo: 'https://portfolionew-orcin-pi.vercel.app/',
-    color: "from-purple-400 to-pink-500",
-    features: [
-      "Responsive design",
-      "Smooth animations",
-      "Interactive components",
-      "Modern UI/UX"
     ]
   },
   {

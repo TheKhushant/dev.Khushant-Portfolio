@@ -7,6 +7,15 @@ import { Github, ExternalLink } from 'lucide-react';
 const projectsData = [
   {
     id: 1,
+    title: 'Portfolio Website',
+    description: 'A responsive, animated portfolio website to showcase skills and projects.',
+    technologies: ['React', 'Tailwind CSS', 'Framer Motion'],
+    image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=800&q=80',
+    github: '#',
+    liveDemo: '#'
+  },
+  {
+    id: 2,
     title: 'Railway Employee Management System',
     description: 'A modern e-commerce solution with cart functionality, user authentication, and payment processing.',
     technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
@@ -15,20 +24,11 @@ const projectsData = [
     liveDemo: '#'
   },
   {
-    id: 2,
+    id: 3,
     title: 'Women Safty Project',
     description: 'A collaborative task management tool with real-time updates, task assignment, and progress tracking.',
     technologies: ['React', 'Tailwind CSS', 'TypeScript'],
     image: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=800&q=80',
-    github: '#',
-    liveDemo: '#'
-  },
-  {
-    id: 3,
-    title: 'Portfolio Website',
-    description: 'A responsive, animated portfolio website to showcase skills and projects.',
-    technologies: ['React', 'Tailwind CSS', 'Framer Motion'],
-    image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=800&q=80',
     github: '#',
     liveDemo: '#'
   },
