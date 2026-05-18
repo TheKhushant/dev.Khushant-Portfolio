@@ -132,7 +132,7 @@ const NavBar: React.FC = () => {
                   <Rocket 
                     className={`transition-all duration-500 ${
                       scrolled ? "text-cyan-400 size-6" : "text-white size-7"
-                    } group-hover:rotate-45 group-hover:scale-110`}
+                    } group-hover:rotate-45`}
                   />
                 </div>
                 {/* Orbiting particles */}
@@ -147,7 +147,7 @@ const NavBar: React.FC = () => {
               <span
                 className={`text-2xl font-black bg-gradient-to-r from-cyan-300 via-purple-300 to-cyan-300 bg-clip-text text-transparent transition-all duration-500 ${
                   scrolled ? "text-lg" : "text-xl"
-                } group-hover:scale-105 group-hover:tracking-wider`}
+                } group-hover:bg-gradient-to-r from-cyan-400 via-purple-400 to-cyan-400`}
                 style={{
                   backgroundSize: '200% 100%',
                   animation: 'shimmer 3s ease-in-out infinite',
